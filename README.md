@@ -3,12 +3,12 @@ flask and MySQL section - users_cr assignment
 
 ## All Users page:
 
-![users](https://user-images.githubusercontent.com/99504059/176843349-7206ea45-5acd-4286-ada1-bcd4e6dc98b1.png)
+![users](https://user-images.githubusercontent.com/99504059/176940807-d0b9b313-51f2-4b62-8889-eea023805290.png)
 
 ## Create a New User page:
 
-![new](https://user-images.githubusercontent.com/99504059/176844227-a9c4313b-4017-4809-a462-27b9668f7612.png)
+![new](https://user-images.githubusercontent.com/99504059/176940818-98b423a5-db27-438d-8f2d-39ad0f03f109.png)
 
 ## All Users page with NEWLY Added User:
 
-![created](https://user-images.githubusercontent.com/99504059/176843535-99cea85e-7502-4a32-9b04-6d2dd8a29261.png)
+![created](https://user-images.githubusercontent.com/99504059/176940831-b22834bd-1a2c-4a5a-9e3f-dbbfc7b0a1d5.png)
