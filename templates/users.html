@@ -9,15 +9,32 @@
     <title>Read (all)</title>
 </head>
 <body>
-    <h1>All Users</h1>
-    {% for one_user in all_users %}
-    <hr>
-    <p>Name: {{one_user.first_name}} {{one_user.last_name}} - email: {{one_user.email}}</p>
-    <hr>
-    {% endfor %}
-    <!-- Add a button to create a new user -->
-    <a href="/users/new">Create a New User</a>
-
+    <div class="container py-5 mb-4 bg-light rounded-3 ">
+        <div class="p-5 mb-4 lc-block">
+            <div class="lc-block">
+                <div editable="rich">
+                        <h1 class="fw-bolder display-3">All users:</h1>
+                    </div>
+                </div>
+                <div class="lc-block col-md-12">
+                <div editable="rich">
+                    <table class="table table-striped">
+                        <tbody>
+                            {% for one_user in all_users %}
+                            <tr>
+                                <td><p>Name: {{one_user.first_name}} {{one_user.last_name}} - email: {{one_user.email}}</p></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <div class="lc-block d-grid gap-2 d-sm-flex justify-content-sm-left">
+                        <a class="btn btn-primary btn-lg px-4 gap-3 btn-success" href="/user/new" role="button">Create a New User</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='/js/script.js') }}"></script>
