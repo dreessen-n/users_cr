@@ -5,12 +5,12 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     """For this assignment redirect to users page"""
-    return redirect('users.html')
+    return redirect('/users.html')
 
 @app.route('/users')
 def show_all():
     """Render All the users"""
-    return render_template('index.html')
+    return render_template('users.html')
 
 @app.errorhandler(404)
 def page_not_found(e):
