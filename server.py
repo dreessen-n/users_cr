@@ -16,7 +16,12 @@ def show_all():
     print(users)
     return render_template('users.html', all_users=users)
 
-@app.route('/users/new', methods=['POST'])
+@app.route('/users/new')
+def show_add_form():
+    """Create form to add new user"""
+    return render_template('new.html')
+
+@app.route('/users/new/create', methods=["POST"] )
 def create_new_user():
     """Add a new user to db users"""
     #  First create a dict based on request form
