@@ -7,7 +7,7 @@ flask and MySQL section - users_cr assignment
 
 ## Create a New User page:
 
-![new](https://user-images.githubusercontent.com/99504059/176844051-6961f167-9c90-422d-afd6-cdbb3af091f4.png)
+![new](https://user-images.githubusercontent.com/99504059/176844227-a9c4313b-4017-4809-a462-27b9668f7612.png)
 
 ## All Users page with NEWLY Added User:
 
