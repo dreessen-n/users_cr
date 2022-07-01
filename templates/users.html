@@ -22,7 +22,7 @@
                         <tbody>
                             {% for one_user in all_users %}
                             <tr>
-                                <td><p>Name: {{one_user.first_name}} {{one_user.last_name}} - email: {{one_user.email}}</p></td>
+                                <td><p>USER ID: {{one_user.id}} - NAME: {{one_user.first_name}} {{one_user.last_name}} - EMAIL: {{one_user.email}} - CREATED AT: {{one_user.created_at}}</p></td>
                             </tr>
                             {% endfor %}
                         </tbody>
