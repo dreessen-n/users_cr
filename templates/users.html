@@ -20,9 +20,20 @@
                 <div editable="rich">
                     <table class="table table-striped">
                         <tbody>
+                            <tr>
+                                <th>User Id</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+                                <th>Created At</th>
+                            </tr>
                             {% for one_user in all_users %}
                             <tr>
-                                <td><p>USER ID: {{one_user.id}} - NAME: {{one_user.first_name}} {{one_user.last_name}} - EMAIL: {{one_user.email}} - CREATED AT: {{one_user.created_at}}</p></td>
+                                <td>{{one_user.id}}</td>
+                                <td>{{one_user.first_name}}</td>
+                                <td>{{one_user.last_name}}</td>
+                                <td>{{one_user.email}}</td>
+                                <td>{{one_user.created_at}}</td>
                             </tr>
                             {% endfor %}
                         </tbody>
