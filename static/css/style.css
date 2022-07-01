@@ -8,3 +8,8 @@
 .input-group {
     margin-bottom: 10px;
 }
+
+.btn-home {
+    display: flex;
+    justify-content: flex-end;
+}
