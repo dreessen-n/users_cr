@@ -7,7 +7,7 @@ app.secret_key='REinstall working well'
 @app.route('/')
 def index():
     """For this assignment redirect to users page"""
-    return redirect('/users.html')
+    return redirect('/users')
 
 @app.route('/users')
 def show_all():
