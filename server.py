@@ -4,7 +4,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    """Rendor the home page"""
+    """For this assignment redirect to users page"""
+    return redirect('users.html')
+
+@app.route('/users')
+def show_all():
+    """Render All the users"""
     return render_template('index.html')
 
 @app.errorhandler(404)
