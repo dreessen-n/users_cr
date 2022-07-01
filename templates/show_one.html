@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <title>Read (all)</title>
+</head>
+<body>
+    <div class="container py-5 mb-4 bg-light rounded-3 ">
+    <div class="btn-home">
+        <a class="btn btn-primary btn-lg px-4 gap-3" href="/users" role="button">Home</a>
+    </div>
+        <div class="p-5 mb-4 lc-block">
+            <div class="lc-block">
+                <div editable="rich">
+                        <h1 class="fw-bolder display-3">User {{  }}:</h1>
+                    </div>
+                </div>
+                <div class="lc-block col-md-12">
+                <div editable="rich">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <th>User Id</th>
+                                <th>Full Name</th>
+                                <th>Email</th>
+                                <th>Created On</th>
+                                <th>Last Updated On</th>
+                            </tr>
+                            <tr>
+                                <td>{{one_user.id}}</td>
+                                <td>{{one_user.first_name}} {{one_user.last_name}}</td>
+                                <td>{{one_user.email}}</td>
+                                <td>{{one_user.created_at}}</td>
+                                <td>{{one_user.updated_at}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="lc-block d-grid gap-2 d-sm-flex justify-content-sm-left">
+                        <a class="btn btn-primary btn-sm px-4 gap-3 btn-success" href="/user/{{ session['id'] }}/edit" role="button">Edit</a>
+                    </div>
+                    <div class="lc-block d-grid gap-2 d-sm-flex justify-content-sm-left">
+                        <a class="btn btn-primary btn-sm px-4 gap-3 btn-success" href="/user/delete" role="button">Delete</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/script.js') }}"></script>
+</body>
+</html>
