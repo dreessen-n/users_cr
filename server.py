@@ -49,6 +49,17 @@ def edit_user(user_id):
     user = User.get_user(user_id)
     return render_template('edit.html', one_user=user)
 
+@app.route('users/<int:user_id>/update', methods=['POST'])
+def update_user(user_id):
+    """Update the user info"""
+    data = {
+        'first_name': request.form['first_name'],
+        'last_name': request.form['last_name'],
+        'email': request.form['email']
+    }
+    User.update(data)
+    return redirect('/users')
+
 
 @app.errorhandler(404)
 def page_not_found(e):

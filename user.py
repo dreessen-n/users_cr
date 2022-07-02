@@ -34,6 +34,13 @@ class User:
         return user
 
     @classmethod
+    def update(cls, data):
+        """Update the user based on id"""
+        query = "UPDATE users SET (first_name=%(first_name)s, last_name=%(last_name)s, email=%(email)s WHERE id=%(id)s;"
+        return connectToMySQL('users_schema').query_db(query, data)
+
+
+    @classmethod
     def save_user(cls, data):
         """Create a classmethod to save a new user"""
         query = "INSERT INTO users (first_name, last_name, email) VALUES (%(first_name)s, %(last_name)s, %(email)s);"

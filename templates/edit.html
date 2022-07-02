@@ -9,7 +9,7 @@
     <title>Create</title>
 </head>
 <body>
-<form action="/users/new/create" method="POST">
+<form action="/user/{{one_user.id}}/update" method="POST">
     <div class="wrapper">
         <div class="container py-5 mb-4 bg-light rounded-3 ">
             <div class="btn-home">
@@ -18,7 +18,7 @@
             <div class="p-5 mb-4 lc-block">
                 <div class="lc-block">
                     <div editable="rich">
-                        <h1 class="fw-bolder display-3">Add a New User</h1>
+                        <h1 class="fw-bolder display-3">Edit User {{one_user.id}}</h1>
                     </div>
                 </div>
                 <div class="lc-block col-md-11">
@@ -26,22 +26,22 @@
                         <!-- Get First Name -->
                         <div class="input-group">
                             <span class="input-group-text">First Name:</span>
-                            <input type="text" name="first_name" aria-label="first_name" class="form-control">
+                            <input type="text" name="first_name" aria-label="first_name" value="{{one_user.first_name}}" class="form-control">
                         </div>
                         <!-- Get Last Name -->
                         <div class="input-group">
                             <span class="input-group-text">Last Name:</span>
-                            <input type="text" name="last_name" aria-label="last_name" class="form-control">
+                            <input type="text" name="last_name" aria-label="last_name" value="{{one_user.last_name}}" class="form-control">
                         </div>
                         <!-- Get Email -->
                         <div class="input-group">
                             <span class="input-group-text">Email:</span>
-                            <input type="text" name="email" aria-label="email" class="form-control">
+                            <input type="text" name="email" aria-label="email" value="{{one_user.email}}" class="form-control">
                         </div>
                     </div>
                 </div>
                 <!-- Submit button -->
-                <button type="submit" class="btn btn-warning">Add User</button>
+                <button type="submit" class="btn btn-warning">Update User</button>
                 </div>
             </div>
         </div>
