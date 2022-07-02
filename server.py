@@ -61,7 +61,8 @@ def update_user(user_id):
     User.update(data)
     print(id)
     # User url_for to redirect to show one user
-    return redirect(url_for('get_one', user_id=user_id))
+    # return redirect(url_for('get_one', user_id=user_id))
+    return redirect(f"/users/{user_id}")
 
 @app.route('/users/delete', methods=['POST'])
 def delete_user():
