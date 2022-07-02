@@ -49,7 +49,7 @@ def edit_user(user_id):
     user = User.get_user(user_id)
     return render_template('edit.html', one_user=user)
 
-@app.route('users/<int:user_id>/update', methods=['POST'])
+@app.route('/users/<int:user_id>/update', methods=['POST'])
 def update_user(user_id):
     """Update the user info"""
     data = {
