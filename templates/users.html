@@ -38,10 +38,13 @@
                                 <td>{{one_user.last_name}}</td>
                                 <td>{{one_user.email}}</td>
                                 <td>{{one_user.created_at}}</td>
-                                <td>
+                                <td class="d-flex gap-2">
                                     <a class="btn btn-info btn-sm px-2 gap-2" href="/users/{{one_user.id}}" role="button">Show</a>
                                     <a class="btn btn-info btn-sm px-2 gap-2" href="/users/{{one_user.id}}/edit" role="button">Edit</a>
-                                    <a class="btn btn-info btn-sm px-2 gap-2" href="/users" role="button">Delete</a>
+                                    <form action="/users/delete", method="POST">
+                                        <input type="hidden" name="id" value="{{one_user.id}}">
+                                        <button class="btn btn-info btn-sm px-2 gap-2" type="submit" role="button">Delete</button>
+                                    </form>
                                 </td>
                             </tr>
                             {% endfor %}

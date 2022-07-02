@@ -53,12 +53,20 @@ def edit_user(user_id):
 def update_user(user_id):
     """Update the user info"""
     data = {
+        'id': user_id,
         'first_name': request.form['first_name'],
         'last_name': request.form['last_name'],
         'email': request.form['email']
     }
     User.update(data)
     return redirect('/users')
+
+@app.route('/users/delete', methods=['POST'])
+def delete_user():
+    """Delete user based on id"""
+    User.delete(request.form)
+    return redirect('/')
+
 
 
 @app.errorhandler(404)

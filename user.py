@@ -36,7 +36,8 @@ class User:
     @classmethod
     def update(cls, data):
         """Update the user based on id"""
-        query = "UPDATE users SET (first_name=%(first_name)s, last_name=%(last_name)s, email=%(email)s WHERE id=%(id)s;"
+        query = "UPDATE users SET first_name=%(first_name)s, last_name=%(last_name)s, email=%(email)s WHERE id=%(id)s;"
+        print(query)
         return connectToMySQL('users_schema').query_db(query, data)
 
 
@@ -45,4 +46,10 @@ class User:
         """Create a classmethod to save a new user"""
         query = "INSERT INTO users (first_name, last_name, email) VALUES (%(first_name)s, %(last_name)s, %(email)s);"
         # The data is a dict that will pass to the method from server.py
+        return connectToMySQL('users_schema').query_db(query, data)
+
+    @classmethod
+    def delete(cls, data):
+        """Delete user from db users"""
+        query = "DELETE FROM users WHERE id=%(id)s;"
         return connectToMySQL('users_schema').query_db(query, data)
