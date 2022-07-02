@@ -36,6 +36,13 @@ def create_new_user():
     # Do not forget to redirect after saving to db
     return redirect('/users')
 
+@app.route('/users/<int:user_id>')
+def get_one(user_id):
+    """Display one user"""
+    user = User.get_user(user_id)
+    print(user)
+    return render_template('show_one.html', one_user=user)
+
 @app.errorhandler(404)
 def page_not_found(e):
     """Error handling for page not found"""

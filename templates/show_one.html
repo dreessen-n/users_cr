@@ -16,7 +16,7 @@
         <div class="p-5 mb-4 lc-block">
             <div class="lc-block">
                 <div editable="rich">
-                        <h1 class="fw-bolder display-3">User {{  }}:</h1>
+                        <h1 class="fw-bolder display-3">User {{one_user.first_name}} {{one_user.last_name}}:</h1>
                     </div>
                 </div>
                 <div class="lc-block col-md-12">
@@ -39,13 +39,10 @@
                             </tr>
                         </tbody>
                     </table>
-                    <div class="lc-block d-grid gap-2 d-sm-flex justify-content-sm-left">
-                        <a class="btn btn-primary btn-sm px-4 gap-3 btn-success" href="/user/{{ session['id'] }}/edit" role="button">Edit</a>
-                    </div>
-                    <div class="lc-block d-grid gap-2 d-sm-flex justify-content-sm-left">
-                        <a class="btn btn-primary btn-sm px-4 gap-3 btn-success" href="/user/delete" role="button">Delete</a>
-                    </div>
-                    </div>
+                        <div class="lc-block d-grid gap-2 d-sm-flex justify-content-sm-left">
+                            <a class="btn btn-primary btn-sm px-4 gap-3 btn-success" href="/user/{{ session['id'] }}/edit" role="button">Edit</a>
+                            <a class="btn btn-primary btn-sm px-4 gap-3 btn-success" href="/user/delete" role="button">Delete</a>
+                        </div>
                 </div>
             </div>
         </div>
