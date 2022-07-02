@@ -59,6 +59,7 @@ def update_user(user_id):
         'email': request.form['email']
     }
     User.update(data)
+    print(id)
     return redirect('/users')
 
 @app.route('/users/delete', methods=['POST'])
