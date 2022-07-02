@@ -66,7 +66,7 @@ def update_user(user_id):
 def delete_user():
     """Delete user based on id"""
     User.delete(request.form)
-    return redirect('/')
+    return redirect('/users')
 
 @app.errorhandler(404)
 def page_not_found(e):
