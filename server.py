@@ -1,4 +1,4 @@
-from flask import Flask, render_template, render_template, request, redirect, session
+from flask import Flask, render_template, render_template, request, redirect, session, url_for
 from user import User
 
 app = Flask(__name__)
@@ -60,7 +60,8 @@ def update_user(user_id):
     }
     User.update(data)
     print(id)
-    return redirect('/users')
+    # User url_for to redirect to show one user
+    return redirect(url_for('get_one', user_id=user_id))
 
 @app.route('/users/delete', methods=['POST'])
 def delete_user():
