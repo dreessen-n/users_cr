@@ -68,8 +68,6 @@ def delete_user():
     User.delete(request.form)
     return redirect('/')
 
-
-
 @app.errorhandler(404)
 def page_not_found(e):
     """Error handling for page not found"""
