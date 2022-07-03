@@ -1,6 +1,6 @@
-from flask_app import app
 from flask import Flask, render_template, request, redirect, session, url_for
-from user import User
+from flask_app import app
+from flask_app.models.user import User
 
 @app.route('/users/<int:user_id>/update', methods=['POST'])
 def update_user(user_id):
