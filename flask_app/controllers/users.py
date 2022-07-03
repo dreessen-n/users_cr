@@ -1,22 +1,6 @@
-from flask import Flask, render_template, request, redirect, session, url_for
 from flask_app import app
+from flask import Flask, render_template, request, redirect, session, url_for
 from flask_app.models.user import User
-
-@app.route('/users/<int:user_id>/update', methods=['POST'])
-def update_user(user_id):
-    """Update the user info"""
-    data = {
-        'id': user_id,
-        'first_name': request.form['first_name'],
-        'last_name': request.form['last_name'],
-        'email': request.form['email']
-    }
-    User.update(data)
-    print(id)
-    # User url_for to redirect to show one user
-    return redirect(url_for('get_one', user_id=user_id))
-    # Could have just used an f-string here as well:
-    # return redirect(f"/users/{user_id}")
 
 @app.route('/')
 def index():
